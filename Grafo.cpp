@@ -28,12 +28,12 @@ Grafo* criaGrafo(int vertices) {
 
 // Add edge
 void criaAresta(Grafo* grafo, int origem, int destino) {
-    // Add edge from s to d
+    // Add edge from source to dest
     nodo* novo = criaVertice(destino);
     novo->seguinte = grafo->listaAdj[origem];
     grafo->listaAdj[origem] = novo;
 
-    // Add edge from d to s
+    // Add edge from dest to source
     novo = criaVertice(origem);
     novo->seguinte = grafo->listaAdj[destino];
     grafo->listaAdj[destino] = novo;
@@ -55,8 +55,7 @@ void imprimeGrafo(Grafo* grafo) {
 
 // DFS algo
 void dfs(Grafo* grafo, int vertice) {
-    nodo* adjList = grafo->listaAdj[vertice];
-    nodo* temp = adjList;
+    nodo* temp = grafo->listaAdj[vertice];;
 
     grafo->visitado[vertice] = 1;
     cout << "Visitado " << vertice << "\n";
