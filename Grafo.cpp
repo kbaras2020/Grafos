@@ -44,7 +44,7 @@ void imprimeGrafo(Grafo* grafo) {
     int v;
     for (v = 0; v < grafo->numVertices; v++) {
         nodo* temp = grafo->listaAdj[v];
-        cout << "\n Vertex " << v << ": ";
+        cout << "\n Vertice " << v << ": ";
         while (temp) {
             cout << temp->vertice << " -> ";
             temp = temp->seguinte;

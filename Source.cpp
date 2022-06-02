@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    Grafo* grafo = criaGrafo(5);
+    /*Grafo* grafo = criaGrafo(5);
 	criaAresta(grafo, 0, 3);
 	criaAresta(grafo, 0, 2);
 	criaAresta(grafo, 0, 1);
@@ -14,9 +14,26 @@ int main() {
 	criaAresta(grafo, 2, 4);
 	criaAresta(grafo, 3, 4);
 	imprimeGrafo(grafo);
+	cout << endl;*/
+	Grafo* grafo = criaGrafo(10);
+	criaAresta(grafo, 0, 1);
+	criaAresta(grafo, 0, 2);
+	criaAresta(grafo, 1, 2);
+	criaAresta(grafo, 2, 3);
+	criaAresta(grafo, 2, 6);
+	criaAresta(grafo, 2, 8);
+	criaAresta(grafo, 4, 5);
+	criaAresta(grafo, 4, 6);
+	criaAresta(grafo, 5, 6);
+	criaAresta(grafo, 6, 7);
+	criaAresta(grafo, 6, 8);
+	criaAresta(grafo, 7, 8);
+	criaAresta(grafo, 8, 9);
+	imprimeGrafo(grafo);
 	cout << endl;
-	dfs(grafo, 0);
-	//bfs(grafo, 0);
+
+	//dfs(grafo, 0);
+	bfs(grafo, 0);
 
 	/*int Grafo[MAX][MAX];
 	
@@ -79,6 +96,7 @@ int main() {
 	int numeroVertices = 7, inicio = 0;
 
 	Dijkstra(Grafo, numeroVertices, inicio);*/
-
+	cin.ignore();
+	cin.get();
 	return 0;
 }
